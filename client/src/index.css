@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.prose pre {
+  @apply bg-gray-800/50 p-4 rounded-lg;
+}
+
+.prose code {
+  @apply text-purple-300;
+}
+
+.prose strong {
+  @apply text-purple-300 font-semibold;
+}
+
+.prose ul {
+  @apply space-y-2;
+}
+
+.prose li {
+  @apply text-gray-300;
+}
+
+.glass-morphism {
+  @apply bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60;
+}
+
+.chat-bubble-user {
+  @apply relative;
+}
+
+.chat-bubble-user::before {
+  content: '';
+  @apply absolute bottom-0 right-0 w-4 h-4 bg-gradient-to-r from-purple-600 to-blue-600 transform translate-y-1/2 rotate-45;
+}
+
+.chat-bubble-ai {
+  @apply relative;
+}
+
+.chat-bubble-ai::before {
+  content: '';
+  @apply absolute bottom-0 left-0 w-4 h-4 bg-gray-700/50 border-l border-b border-gray-600 transform translate-y-1/2 rotate-45;
+}

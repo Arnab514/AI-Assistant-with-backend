@@ -6,7 +6,7 @@ const FooterChip = () => {
     <div className="fixed bottom-4 right-4 z-50">
       <div className="glass-morphism bg-gray-800/80 text-white px-4 py-2 rounded-full shadow-lg border border-gray-700/50 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
         <a
-          href="https://github.com/Arnab514"
+          href="https://github.com/Arnab514/AI-Assistant-with-backend"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 group"
